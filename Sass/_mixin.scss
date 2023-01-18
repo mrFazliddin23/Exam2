@@ -1,0 +1,29 @@
+@mixin button {
+    width: 180px;
+    height: 53px;
+    color: $main-color;
+    background-color: #FCB72B;
+    border: none;
+    font: {
+        size: 15px;
+        weight: 700;
+        family: 'Space Mono', serif;
+    }
+    &:hover {
+        background-color: darkslategrey;
+        color: darkcyan;
+        border: 4px solid darkslategrey;
+        transform: scale(1.2);
+        cursor: pointer;
+        transition: all 0.5s ease;
+        font-size: 20px;
+    }
+}
+
+@mixin background {
+    background: {
+        size: cover;
+        repeat: no-repeat;
+        position: center;
+    }
+}

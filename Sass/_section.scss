@@ -1,0 +1,231 @@
+.section {
+    position: relative;
+    &__boxes {
+        margin: 150px 0;
+        display: flex;
+        gap: 30px;
+        justify-content: flex-start;
+        &--title {
+            overflow-y: hidden;
+            color: $section-color;
+            max-width: 350px;
+            margin-top: 40px;
+            font: {
+                size: 24px;
+                weight: 700;
+                family: "Space Mono", serif;
+            }
+        }
+        &--text {
+            color: $menu-color;
+            max-width: 350px;
+            line-height: 25px;
+            font: {
+                family: "Lexend Deca" serif;
+                size: 15px;
+                weight: 400;
+            }
+        }
+    }
+    &__line {
+        max-width: 962px;
+        width: 100%;
+        border: 8px solid #e5ecf4;
+        position: absolute;
+        top: 180px;
+        left: 0;
+        z-index: -1;
+    }
+    &__info2 {
+        padding: 10px;
+        overflow-y: hidden;
+        position: relative;
+        margin-bottom: 200px;
+        display: flex;
+        gap: 80px;
+        padding: 0 80px;
+    }
+    &__info {
+        overflow-y: hidden;
+        position: relative;
+        margin-bottom: 200px;
+        display: flex;
+        gap: 80px;
+        padding: 0 80px;
+        flex-direction: row-reverse;
+        &--content {
+            overflow-y: hidden;
+        }
+        &--title {
+            overflow-y: hidden;
+            color: $section-color;
+            max-width: 480px;
+            margin-bottom: 24px;
+            font: {
+                size: 48px;
+                weight: 700;
+                family: "Space Mono", serif;
+            }
+        }
+        &--text {
+            color: $menu-color;
+            max-width: 540px;
+            line-height: 25px;
+            margin-bottom: 40px;
+            font: {
+                size: 15px;
+                weight: 400;
+                family: "Lexend Deca";
+            }
+        }
+        &--btn {
+            @include button;
+        }
+        &--strelka1 {
+            width: 700px;
+            position: absolute;
+            top: 250px;
+            right: -150px;
+        }
+        &--strelka2 {
+            position: absolute;
+            top: 40px;
+            left: -80px;
+        }
+        &--strelka3 {
+            position: absolute;
+            top: 90px;
+            right: 80px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 700px;
+        padding: 0 15px;
+    }
+    .section {
+        &__boxes {
+            padding: 0 60px;
+            display: block;
+            &--box {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        &__line {
+            width: 0;
+            height: 630px;
+            top: -10px;
+            left: 150px;
+        }
+        &__info2 {
+            display: block;
+            text-align: center;
+        }
+        &__info {
+            text-align: center;
+            display: block;
+            &--img {
+                width: 400px;
+                height: 400px;
+            }
+            &--title {
+                text-align: center;
+                max-width: 600px;
+            }
+            &--text {
+                text-align: center;
+                max-width: 600px;
+            }
+            &--strelka1 {
+                top: 270px;
+                right: -130px;
+            }
+            &--strelka2 {
+                top: 40px;
+                left: -50px;
+            }
+            &--strelka3 {
+                top: 40px;
+                right: 70px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        max-width: 500px;
+        padding: 0 20px;
+    }
+    .section {
+        &__line {
+            display: none;
+        }
+        &__boxes {
+            display: block;
+            &--box {
+                display: flex;
+                gap: 50px;
+                justify-content: space-between;
+                align-items: flex-start;
+            }
+            &--title {
+                color: $section-color;
+                max-width: 350px;
+                margin-top: 0;
+                font: {
+                    size: 24px;
+                    weight: 700;
+                    family: "Space Mono", serif;
+                }
+            }
+            &--text {
+                color: $menu-color;
+                max-width: 350px;
+                line-height: 25px;
+                font: {
+                    family: "Lexend Deca" serif;
+                    size: 15px;
+                    weight: 400;
+                }
+            }
+        }
+        &__info2 {
+            &--img {
+                width: 300px;
+                height: 300px;
+            }
+        }
+        &__info {
+            &--img {
+                width: 300px;
+                height: 300px;
+            }
+            &--strelka1 {
+                width: 500px;
+                top: 160px;
+                right: -120px;
+            }
+            &--strelka2 {
+                top: 10px;
+                left: -20px;
+                width: 300px;
+            }
+            &--strelka3 {
+                width: 300px;
+                top: 40px;
+                right: 0;
+            }
+            &--title {
+                font-size: 36px;
+                max-width: 320px;
+            }
+            &--text {
+                max-width: 311px;
+            }
+        }
+    }
+}

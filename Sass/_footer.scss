@@ -1,0 +1,104 @@
+.footerEnter {
+    overflow-y: hidden;
+    background-color: $section-color;
+    width: 100%;
+    height: 300px;
+    padding: 70px;
+    &__items {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__title {
+        overflow-y: hidden;
+        color: $main-color;
+        line-height: 48px;
+        max-width: 450px;
+        font: {
+            size: 48px;
+            weight: 700;
+            family: "Space Mono", serif;
+        }
+        &__markets {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+    }
+}
+
+.footerBottom {
+    overflow-y: hidden;
+    background-color: #333a44;
+    width: 100%;
+    padding: 32px 70px;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    &__menu {
+        margin-left: 20px;
+        display: flex;
+        gap: 32px;
+        &--link {
+            color: $menu-color;
+            font: {
+                size: 15px;
+                weight: 700;
+            }
+        }
+    }
+    &__socials {
+        display: flex;
+        gap: 24px;
+        margin-left: auto;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        max-width: 700px;
+        padding: 0 15px;
+    }
+    .footerEnter {
+        padding: 30px;
+        &__items {
+            display: block;
+            text-align: center;
+        }
+        &__title {
+            max-width: 657px;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        max-width: 500px;
+        padding: 0 20px;
+    }
+    .footerEnter {
+        height: 380px;
+    }
+    .footer {
+        height: 438px;
+        padding: 68px 134px;
+        flex-direction: column;
+        align-items: center;
+        &__menu {
+            width: 150px;
+            text-align: center;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 30px;
+        }
+        &__socials {
+            margin-left: 0;
+            width: 12 0px;
+            text-align: center;
+        }
+    }
+}
